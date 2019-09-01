@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="ui text container segment">
+    <h1 class="ui header">
+        {{ blog.title}}
+    </h1>
+    <img class="ui image rounded fluid bordered" src="{{blog.image}}">
+    <div class="ui divider hidden">
+        Created: {{blog.created}}
+    </div>
+    <p>
+        {{blog.body}}
+    </p>
+
+    <form action="/blogs/delete/{{blog.id}}" method="POST" class="ui form">{% csrf_token %}
+        <button class="ui button inverted red">
+            Delete Post
+        </a>
+    </form>
+    
+</div>
+{% endblock content %}

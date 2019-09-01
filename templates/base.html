@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CricBlog</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+    </head>
+    <body>
+    
+        <div class="ui top fixed menu inverted" id="navbar">
+            <div class="ui container">
+                <div class="item logo">
+                    <strong>CricBlog</strong>
+                </div>
+                <a class="active item" href="/">Home</a>
+                <a class="item" href="/new">New Blog</a>
+            </div>
+        </div>
+        <div style="min-height:42px; display:block" id="space"></div>
+
+
+        {% block content %}
+            content
+        {% endblock content %}
+
+        <div style="background-color:#b0aaff; text-align:right">
+            <p class="ui container">CricBlog  -Copyright Kz</p>
+            </div>
+            <script
+                src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                crossorigin="anonymous">
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+            <script type="text/javascript">
+                $(".ui.dropdown")
+                    .dropdown(
+                        
+                    );
+            </script>
+        </body>
+    </html>

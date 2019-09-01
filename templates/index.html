@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="ui items text container segment">
+    {% for blog in blogs %}
+        {% if blogs.0 != blog %}
+            <div class="ui divider"></div>
+        {% endif %}
+        <div class="item">
+            <div class="image">
+                <img src="{{blog.image}}">
+            </div>
+            <div class="content">
+                <a class="header">{{blog.title}}</a>
+            <div class="meta">
+                <span class="date">Date: {{ blog.created}}</span>
+            </div>
+            <div class="description">
+                <p>
+                    {% if blog.body|length > 100 %}
+                        {{blog.body | slice:":100"}} ...
+                    {% else %}
+                        {{blog.body}}
+                    {% endif %}
+                </p>
+            </div>
+            <div class="extra">
+                <a class="ui primary button inverted blue" href="/blogs/{{blog.id}}">
+                    Read More
+                </a>
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}
